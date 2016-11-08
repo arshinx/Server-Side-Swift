@@ -6,6 +6,8 @@
         <title>List!</title>
     </head>
     <body>
-        <h1>#(fruit_name) is a tasty fruit!</h1>
+        #loop(fruits, "fruit_name") {
+            <h1>#(fruit_name) is a tasty fruit!</h1>
+        }
     </body>
 </html>
