@@ -7,7 +7,9 @@ import Vapor
 let drop = Droplet()
 
 // Closure - single parameter for http request
-
+drop.get { request in
+    
+}
 
 // Run Server
 drop.run()
