@@ -28,8 +28,12 @@ drop.get("hello", "there") { request in
     
     return try JSON(node: [
         "message": "Hello, there!"
-        ])
+    ])
 }
+
+// Parameter based Route
+// route '/apples/#'
+
 
 // Run Server
 drop.run()
