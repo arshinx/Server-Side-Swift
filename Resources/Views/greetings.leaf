@@ -5,5 +5,9 @@
 }
 
 #export("body") {
-    
+    #if(sayHello) {
+        <p>Hello! :]</p>
+    } ##else() {
+    <p>Goodbye. :[</p>
+    }
 }
