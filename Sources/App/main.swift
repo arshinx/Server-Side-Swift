@@ -50,7 +50,7 @@ drop.get("users") { request in
     return try drop.view.make("users", Node(node: ["users": users]))
 }
 
-// "/greetings" route
+// "/greetings?sayHello=true" route
 drop.get("greetings") { request in
     
     guard let sayHello = request.data["sayHello"]?.bool else {
