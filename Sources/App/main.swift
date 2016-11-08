@@ -20,12 +20,12 @@ drop.get("template") { request in
     return try drop.view.make("hello", Node(node: ["name": "Ray"])) // passing data from db, etc.
 }
 
-// "/template2/name"
+// "/template2/name" route
 drop.get("template2", String.self) { request, name in
     return try drop.view.make("hello", Node(node: ["name": name])) // passing data from db, etc.
 }
 
-// "/list"
+// "/list" route
 drop.get("list") { request in
     
     // Fruits collection
@@ -33,6 +33,20 @@ drop.get("list") { request in
     
     // return list template with fruits collection in a dictionary
     return try drop.view.make("list", Node(node: ["fruits": fruits]))
+}
+
+// "/users" route
+drop.get("users") { request in
+    
+    // Fruits collection
+    let users = try [
+        ["name": "James", "email": "james@email.com"].makeNode(),
+        ["name": "Diana", "email": "diana@email.com"].makeNode(),
+        ["name": "Ally",  "email": "ally@email.com" ].makeNode()
+    ].makeNode()
+    
+    // return list template with fruits collection in a dictionary
+    return try drop.view.make("users", Node(node: ["users": users]))
 }
 
 // route '/hello'
