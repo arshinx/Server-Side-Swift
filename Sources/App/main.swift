@@ -14,7 +14,7 @@ drop.get { request in
     // Respond with String
     // return "Hello Vapor!"
     
-    // Respond with JSON
+    // Respond with JSON - create a dictionary
     return try JSON(node: [
         "message": "Hello, Vapor!"
     ])
