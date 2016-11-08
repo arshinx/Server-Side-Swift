@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html lang"en">
+    
+    <head>
+        <title>List!</title>
+    </head>
+    <body>
+        #loop(fruits, "fruit_name") {
+        <h1>#(fruit_name) is a tasty fruit!</h1>
+        }
+    </body>
+</html>
