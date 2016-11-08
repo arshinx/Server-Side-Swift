@@ -17,7 +17,7 @@ drop.get { request in
 
 // Template route for hello.leaf
 drop.get("template") { request in
-    return try drop.view.make("hello")
+    return try drop.view.make("hello", Node(node: ["name": "Ray"])) // passing data from db, etc.
 }
 
 // route '/hello'
