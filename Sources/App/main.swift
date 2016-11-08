@@ -27,8 +27,12 @@ drop.get("template2", String.self) { request, name in
 
 // "/list"
 drop.get("list") { request in
+    
+    // Fruits collection
     let fruits = try ["Apple", "Persimmon", "Grapes", "Watermellon"].makeNode()
     
+    // return list template with fruits collection in a dictionary
+    return try drop.view.make("list", Node(node: ["fruits": fruits]))
 }
 
 // route '/hello'
