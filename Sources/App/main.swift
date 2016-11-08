@@ -39,5 +39,12 @@ drop.get("apples", Int.self) { request, apples in
     ])
 }
 
+// Post request (use data dictionary to receive data
+drop.post("post") { request in
+    guard let name = request.data["name"]?.string else {
+        throw Abort.badRequest
+    }
+}
+
 // Run Server
 drop.run()
