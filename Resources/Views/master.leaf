@@ -3,7 +3,7 @@
 <html lang"en">
     
     <head>
-        #embed("head")
+        #import("head")
     </head>
     <body>
         #import("body")
