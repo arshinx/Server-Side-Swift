@@ -6,7 +6,7 @@
 
 #export("body") {
     #if(sayHello) {
-        <p>Hello! :]</p>
+<p>Hello! :] #raw() { #youareawesome }</p>
     } ##else() {
     <p>Goodbye. :[</p>
     }
