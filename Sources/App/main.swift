@@ -33,7 +33,11 @@ drop.get("hello", "there") { request in
 
 // Parameter based Route
 // route '/apples/#'
-
+drop.get("apples", Int.self) { request, apples in
+    return try JSON(node: [
+        "message": "Pluck one out, pass it around, \(apples-1) number of apples on the wall..."
+    ])
+}
 
 // Run Server
 drop.run()
