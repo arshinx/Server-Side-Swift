@@ -10,7 +10,7 @@ let drop = Droplet()
 drop.get { request in
     
     // return (an object that converts to response)
-    
+    return "Hello Vapor!" // Respond with String
 }
 
 // Run Server
