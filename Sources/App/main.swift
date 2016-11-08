@@ -10,14 +10,13 @@ let drop = Droplet()
 drop.get { request in
     
     // return (an object that converts to response)
-    
-    // Respond with String
-    // return "Hello Vapor!"
-    
+
     // Respond with JSON - create a dictionary
     return try JSON(node: [
         "message": "Hello, Vapor!"
     ])
+    
+
     
 }
 
