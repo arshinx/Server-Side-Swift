@@ -4,14 +4,8 @@
     #embed("title")
 }
 
-<html lang"en">
-    
-    <head>
-        #embed("title")
-    </head>
-    <body>
-        #loop(users, "user") {
+#export("body") {
+    #loop(users, "user") {
         <h1>Hello, #(user.name)! <a href="mailto:#(user.email)">[Email]</a></h1>
-        }
-    </body>
-</html>
+    }
+}
