@@ -25,6 +25,12 @@ drop.get("template2", String.self) { request, name in
     return try drop.view.make("hello", Node(node: ["name": name])) // passing data from db, etc.
 }
 
+// "/list"
+drop.get("list") { request in
+    let fruits = try ["Apple", "Persimmon", "Grapes", "Watermellon"].makeNode()
+    
+}
+
 // route '/hello'
 drop.get("hello") { request in
 
