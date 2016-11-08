@@ -23,5 +23,13 @@ drop.get("hello") { request in
     ])
 }
 
+// route '/hello/there'
+drop.get("hello", "there") { request in
+    
+    return try JSON(node: [
+        "message": "Hello, there!"
+        ])
+}
+
 // Run Server
 drop.run()
