@@ -6,6 +6,7 @@ import Vapor
 // Droplet class handles GET/POST (HTTP Verbs) and routes
 let drop = Droplet()
 
+
 // Closure - single parameter for http request
 drop.get { request in
     
@@ -14,6 +15,8 @@ drop.get { request in
         "message": "Hello, Vapor!"
     ])
 }
+
+
 
 // Template route for hello.leaf
 drop.get("template") { request in
@@ -38,16 +41,16 @@ drop.get("list") { request in
 // "/users" route
 drop.get("users") { request in
     
-    // Fruits collection
     let users = try [
         ["name": "James", "email": "james@email.com"].makeNode(),
         ["name": "Diana", "email": "diana@email.com"].makeNode(),
         ["name": "Ally",  "email": "ally@email.com" ].makeNode()
     ].makeNode()
     
-    // return list template with fruits collection in a dictionary
     return try drop.view.make("users", Node(node: ["users": users]))
 }
+
+
 
 // route '/hello'
 drop.get("hello") { request in
