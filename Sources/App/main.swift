@@ -13,7 +13,14 @@ drop.get { request in
     return try JSON(node: [
         "message": "Hello, Vapor!"
     ])
-    
+}
+
+// route '/hello'
+drop.get("hello") { request in
+
+    return try JSON(node: [
+        "message": "Hello, Again!"
+    ])
 }
 
 // Run Server
