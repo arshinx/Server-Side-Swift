@@ -56,6 +56,8 @@ drop.get("greetings") { request in
     guard let sayHello = request.data["sayHello"]?.bool else {
         throw Abort.badRequest
     }
+    
+    return try drop.view.make("greetings", Node(node: ["sayHello": sayHello.makeNode()]))
 }
 
 
