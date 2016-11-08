@@ -20,7 +20,7 @@ drop.get("template") { request in
     return try drop.view.make("hello", Node(node: ["name": "Ray"])) // passing data from db, etc.
 }
 
-// Template route for hello.leaf
+// "/template2/name"
 drop.get("template2", String.self) { request, name in
     return try drop.view.make("hello", Node(node: ["name": name])) // passing data from db, etc.
 }
