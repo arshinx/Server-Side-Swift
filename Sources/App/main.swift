@@ -50,6 +50,13 @@ drop.get("users") { request in
     return try drop.view.make("users", Node(node: ["users": users]))
 }
 
+// "/greetings" route
+drop.get("greetings") { request in
+    
+    guard let sayHello = request.data["sayHello"]?.bool else {
+        throw Abort.badRequest
+    }
+}
 
 
 // route '/hello'
