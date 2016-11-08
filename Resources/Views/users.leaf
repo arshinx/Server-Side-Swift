@@ -3,7 +3,7 @@
 <html lang"en">
     
     <head>
-        <title>Users</title>
+        #embed("title")
     </head>
     <body>
         #loop(users, "user") {
