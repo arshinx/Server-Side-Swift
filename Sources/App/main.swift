@@ -15,6 +15,11 @@ drop.get { request in
     ])
 }
 
+// Template route for hello.leaf
+drop.get("template") { request in
+    return try drop.view.make("hello")
+}
+
 // route '/hello'
 drop.get("hello") { request in
 
