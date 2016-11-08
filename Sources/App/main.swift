@@ -14,6 +14,11 @@ drop.get { request in
     // Respond with String
     // return "Hello Vapor!"
     
+    // Respond with JSON
+    return try JSON(node: [
+        "message": "Hello, Vapor!"
+    ])
+    
 }
 
 // Run Server
