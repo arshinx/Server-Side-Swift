@@ -7,7 +7,7 @@
     </head>
     <body>
         #loop(users, "user") {
-        <h1>Hello, #(user.name)! <href="mailto:#(user.email)">[Email]</a></h1>
+        <h1>Hello, #(user.name)! <a href="mailto:#(user.email)">[Email]</a></h1>
         }
     </body>
 </html>
