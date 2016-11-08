@@ -44,6 +44,10 @@ drop.post("post") { request in
     guard let name = request.data["name"]?.string else {
         throw Abort.badRequest
     }
+    
+    return try JSON(node: [
+        "message": "Hello, \(name)!"
+    ])
 }
 
 // Run Server
