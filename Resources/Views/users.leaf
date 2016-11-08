@@ -1,5 +1,9 @@
 #extend("master")
 
+#export("head") {
+    #embed("title")
+}
+
 <html lang"en">
     
     <head>
